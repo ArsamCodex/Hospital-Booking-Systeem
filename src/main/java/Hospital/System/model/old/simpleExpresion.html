@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Expression</title>
+</head>
+<body>
+
+<h5>Simple Expression</h5>
+
+<p th:text="${person.id}">Default</p>
+<p th:text="${person.name}">Default Name </p>
+<hr>
+<h4>Adress</h4>
+<p th:text="${person.address.street}">Default Adress</p>
+<p th:text="${person.address.zipCode}">Default Adress</p>
+
+<marquee width="40%" direction="left" scrollamount="50" height="100px "><h1>SECOND METHOD </h1>"></marquee>
+<div th:object="${person}">
+    <p th:text="*{id}">ID:  Default </p>
+    <p th:text="*{name}">Name:  Default</p>
+    <p>Address</p>
+    <p th:text="*{address.street}"> Street Default /p>
+    <p th:text="*{address.zipCode}">Zipcode: Default </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<h1>Simple Expression</h1>-->
+<!--<h2>Variable Expression</h2>-->
+<!--<p th:text="${person.id}">ID: 0</p>-->
+<!--<p th:text="${person.name}">Name: Tina</p>-->
+<!--<p>Address</p>-->
+<!--<p th:text="${person.address.street}">Street: 1234 Burlington Ave</p>-->
+<!--<p th:text="${person.address.zipCode}">Zipcode: 1234567890</p>-->
+
+<!--<h2>Selection Variable expression</h2>-->
+<!--<div th:object="${person}">-->
+<!--    <p th:text="*{id}">ID:  Default </p>-->
+<!--    <p th:text="*{name}">Name:  Default</p>-->
+<!--    <p>Address</p>-->
+<!--    <p th:text="*{address.street}"> Street Default /p>-->
+<!--    <p th:text="*{address.zipCode}">Zipcode: Default </p>-->
+<!--</div>-->
+
+<h2>Message Expression</h2>
+<p th:utext="#{project}">Default Channel Name</p>
+<p th:utext="#{channel}">Default Project Name</p>
+
+<!--<h2>Link URL Expression</h2>-->
+<!--<p><a href="#" th:href="@{/user/1}">Link 1</a></p>-->
+<!--&lt;!&ndash; /user?id=1&name=Miss Xing &ndash;&gt;-->
+<!--<p><a href="#" th:href="@{/user(id=${person.id}, name=${person.name})}">Query String URL</a></p>-->
+<!--&lt;!&ndash;/user/1/name/Miss Xing &ndash;&gt;-->
+<!--<p><a href="#" th:href="@{/user/{uid}/name/{uname}(uid=${person.id}, uname=${person.name})}">Path Variable URL</a></p>-->
+</body>
+</html>

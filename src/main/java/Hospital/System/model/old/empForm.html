@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--<form method="post" th:action="@{/customerDetail}" th:object="${data}">-->
+<!--    <div>-->
+<!--        FirstName : <input type="text" name="firstName"/>-->
+<!--        <br/>-->
+<!--        <hr>-->
+<!--        LastName : <input type="text" name="lastName"/>-->
+<!--        <br/>-->
+<!--        <hr>-->
+<!--        Email : <input type="text" name="email"/>-->
+<!--        <br/>-->
+<!--        <hr>-->
+<!--        <input type="submit" value="Submit"/>-->
+
+
+<!--    </div>-->
+
+<form method="post" th:action="@{/addEmp}" th:object="${emp}">
+
+    <p>First Name: <input th:field="*{firstName}">></p>
+    <p>Last Name: <input th:field="*{lastName}"></p>
+    <p>Email: <input th:field="*{email}"></p>
+
+
+    <input type="submit" value="Add">
+</form>
+
+
+</form>
+</body>
+</html>

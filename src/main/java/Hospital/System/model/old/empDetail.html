@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CUSTOMER DETAILS</title>
+</head>
+
+
+<body >
+
+
+<!--<p th:text="*{firstName}"></p>-->
+<!--<p th:text="*{lastName}"></p>-->
+<!--<p th:text="*{email}"></p>-->
+
+<!--<p>ID: <span th:text="${savedEmployee.id}" th:remove="tag"></span></p>-->
+<div>
+    <h4> Welcome to Site </h4> <h4 th:text="${emp.firstName}" > !</h4></div>
+<hr>
+<p>First Name: <span th:text="${firstName}"></span></p>
+<p>Lirst Name: <span th:text="${emp.lastName}"></span></p>
+<p>E Mail: <span th:text="${emp.email}"></span></p>
+<!--<p>Last Name: <span th:text="${savedEmployee.lastName}"></span></p>-->
+<!--<p>Last Name: <span th:text="${savedEmployee.email}"></span></p>-->
+
+
+</body>
+</html>

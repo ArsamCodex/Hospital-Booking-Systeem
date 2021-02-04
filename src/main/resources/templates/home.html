@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragment/parts::head">
+</head>
+<body>
+<header th:replace="fragment/parts::menu">
+</header>
+<main>
+    <marquee scrollamount="20" behavior="slide"><h1 class="h1 text-cente">WELCOME TO ARSAM`S HOSPITAL</h1></marquee>
+    <marquee scrollamount="18" behavior="slide"> <a href="/login">Als je voor eerste keer hier bent dan maak uw account aan Hier</a></marquee>
+
+    <br>
+
+    <marquee scrollamount="16" behavior="slide"> <a href="/register-patient">Als je wel een account hebt Log in hier</a></marquee>
+<!--    <img src="/resources/image/w.jpg" alt="JUST RMOVE IT" width="100" height="100">-->
+    </br>
+
+</main>
+<div th:replace="fragment/parts::scripts">
+</div>
+</body>
+</html>

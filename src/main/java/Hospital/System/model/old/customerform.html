@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Firts PAGE</title>
+</head>
+<body>
+
+<form method="post" th:action="@{/register}" th:object="${customer}">
+
+    <p>First Name: <input th:field="*{firstName}"></p>
+    <p>Last Name: <input th:field="*{lastName}"></p>
+    <p>Email: <input th:field="*{street}"></p>
+    <p>Email: <input th:field="*{email}"></p>
+
+
+    <input type="submit" value="Add">
+</form>
+
+
+</body>
+</html>
